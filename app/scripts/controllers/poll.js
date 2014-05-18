@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('iPollApp')
-  .controller('MainCtrl', function ($scope, $ionicSideMenuDelegate) {
-    
+  .controller('PollCtrl', function ($scope, $stateParams, $ionicSideMenuDelegate ) {
+    console.log('poll state activated');
     $scope.toggleCategories = function(){
     	$ionicSideMenuDelegate.toggleLeft();
     };

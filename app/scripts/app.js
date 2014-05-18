@@ -6,12 +6,44 @@ angular
   ])
 .config(function($stateProvider, $urlRouterProvider){
   
-  $urlRouterProvider.otherwise("/");
-  $stateProvider.state('home', {
-     url : "/",
-     templateUrl : "views/main.html",
-     controller: 'MainCtrl'
+  $urlRouterProvider.otherwise("/poll/latest");
+
+  $urlRouterProvider.when("/poll", "/poll/latest");
+
+  $stateProvider.state("poll", {
+      url : '/poll',
+      templateUrl: 'views/poll.html',
+      controller: 'PollCtrl'
   });
+
+  $stateProvider.state("poll.category", {
+    url : '/:category',
+    views: {
+      "poll-list@poll": {
+        templateUrl: 'views/poll_list.html',
+        controller: 'PollListCtrl'
+
+      }
+    }
+  });
+
+  $stateProvider.state("poll.category.show", {
+    url : '/:pollID',
+    views: {
+      "result@poll": {
+          templateUrl: 'views/poll_result.html',
+          controller: 'ShowpollCtrl'
+
+      }
+    }
+  });
+
+
+  // $stateProvider.state('home', {
+  //    url : "/",
+  //    templateUrl : "views/main.html",
+  //    controller: 'MainCtrl'
+  // });
 
 })
 .run(function($ionicPlatform) {
