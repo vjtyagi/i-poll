@@ -6,20 +6,30 @@ angular
   ])
 .config(function($stateProvider, $urlRouterProvider){
   
-  $urlRouterProvider.otherwise("/poll/latest");
+  $urlRouterProvider.otherwise("/poll/retrieve/latest");
 
-  $urlRouterProvider.when("/poll", "/poll/latest");
+  $urlRouterProvider.when("/poll", "/poll/retrieve/latest");
 
   $stateProvider.state("poll", {
-      url : '/poll',
-      templateUrl: 'views/poll.html',
-      controller: 'PollCtrl'
+    url: '/poll',
+    templateUrl: 'views/parent.html'
   });
 
-  $stateProvider.state("poll.category", {
+  $stateProvider.state("poll.retrieve", {
+      url : '/retrieve',
+      views:{
+        "poll-container@poll": {
+          templateUrl: 'views/poll.html',
+          controller: 'PollCtrl'
+
+        }
+      }
+  });
+
+  $stateProvider.state("poll.retrieve.category", {
     url : '/:category',
     views: {
-      "poll-list@poll": {
+      "poll-list@poll.retrieve": {
         templateUrl: 'views/poll_list.html',
         controller: 'PollListCtrl'
 
@@ -27,10 +37,10 @@ angular
     }
   });
 
-  $stateProvider.state("poll.category.show", {
-    url : '/:pollID',
+  $stateProvider.state("poll.show", {
+    url : '/show/:pollID',
     views: {
-      "result@poll": {
+      "poll-container@poll": {
           templateUrl: 'views/poll_result.html',
           controller: 'ShowpollCtrl'
 
