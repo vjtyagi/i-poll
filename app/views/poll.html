@@ -1,7 +1,8 @@
-<ion-side-menus>
+
+<!--<ion-side-menus>
   
   <!-- Center content -->
-  <ion-side-menu-content drag-content = "true">
+  <!--<ion-side-menu-content drag-content = "true">
     
     <ion-nav-view name= 'poll-list' animation = 'slide-right-left'>
 
@@ -9,24 +10,33 @@
   </ion-side-menu-content>
    
     <!-- Left menu -->
-    <ion-side-menu side="left">
-      <ion-nav-bar class = 'nav-title-slide-ios7 bar-positive'>
-                
-      </ion-nav-bar>
-      <ion-view title = "Categories">
-
+   <!-- <ion-side-menu side="left">
+      <ion-header-bar class = 'bar-positive'>
+          
+      </ion-header-bar> -->
+      <ion-view title = "Categories" class = "dark">
         <ion-content>
               <ion-list>
-                <a class = 'item'>Latest Polls</a>
-                <a class = 'item'>Entertainment</a>
-                <a class = 'item'>Sports</a>
-                <a class = 'item'>Political</a>
+                <a class = 'item item-calm' href="#/poll/categries/latest">
+                 <i class ='icon ion-clock'></i>
+                  Latest Polls
+                </a>
+                <a class = 'item item-energized' href = "#/poll/categries/latest">
+                  <i class = 'icon ion-xbox'></i>
+                  Entertainment</a>
+                <a class = 'item item-balanced' href = "#/poll/categries/latest">
+                  <i class = 'icon ion-earth'></i>
+                  Sports</a>
+                <a class = 'item item-royal' href = "#/poll/categries/latest">
+                  <i class = 'icon ion-bug'></i>
+                  Political</a>
               </ion-list>
         </ion-content>
       </ion-view>
+  <!--
     </ion-side-menu>
     
 
-</ion-side-menus>
+</ion-side-menus>-->
 
 

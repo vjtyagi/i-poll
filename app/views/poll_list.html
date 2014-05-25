@@ -1,29 +1,40 @@
 
-<ion-nav-bar class = 'nav-title-slide-ios7 bar-positive'>
-      <button class = "button button-icon" ng-click = "toggleCategories()">
-          <i class = "icon ion-navicon"></i>
-      </button>
-    </ion-nav-bar>
-
   <ion-view  title = 'Latest Polls'>
 
+  <ion-nav-buttons side="right">
+  
+  <button class = "button button-icon" ng-click = "toggleCategories()">
+          <i class = "icon ion-plus-round"></i>
+      </button>
+
+   <button class = "button button-icon" ng-click = "toggleCategories()">
+          <i class = "icon ion-search"></i>
+      </button>
+
+  </ion-nav-buttons>
+  
   <ion-content>
     <ion-list>
 
-      <a class = 'item' href = "/#/poll/show/123">
-          Do you like peanut butter ?
+      <a class = 'item item-thumbnail-left' href = "#/poll/show/123">
+          <img src = "images/blue-album.jpg" />
+          <h2>Do you like peanut butter ?</h2>
       </a>
 
-      <a class = 'item' href = "/#/poll/show/123">
-          Do you like IPL ?
+      <a class = 'item item-thumbnail-left' href = "#/poll/show/123">
+          <img src = "images/dookie.jpg" />
+          <h2>Do you like IPL ?</h2>
       </a>
 
-      <a class = 'item' href = "/#/poll/show/123">
-          Did you like 2 states ?
+      <a class = 'item item-thumbnail-left' href = "#/poll/show/123">
+        <img src = "images/license-to-ill.jpg" />
+          <h2>Did you like 2 states ?</h2>
       </a>
 
-      <a class = 'item' href = "/#/poll/show/123">
-          Is Arvind Kejriwal fake ?
+      <a class = 'item item-thumbnail-left' href = "#/poll/show/123">
+        <img src = "images/nevermind.jpg" />
+
+        <h2>  Is Arvind Kejriwal fake ?</h2>
       </a>
 
     </ion-list>

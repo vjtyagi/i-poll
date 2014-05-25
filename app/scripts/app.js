@@ -6,17 +6,17 @@ angular
   ])
 .config(function($stateProvider, $urlRouterProvider){
   
-  $urlRouterProvider.otherwise("/poll/retrieve/latest");
+  $urlRouterProvider.otherwise("/poll/categories/latest");
 
-  $urlRouterProvider.when("/poll", "/poll/retrieve/latest");
+  $urlRouterProvider.when("/poll", "/poll/categories/latest");
 
   $stateProvider.state("poll", {
     url: '/poll',
     templateUrl: 'views/parent.html'
   });
 
-  $stateProvider.state("poll.retrieve", {
-      url : '/retrieve',
+  $stateProvider.state("poll.categories", {
+      url : '/categories',
       views:{
         "poll-container@poll": {
           templateUrl: 'views/poll.html',
@@ -26,10 +26,10 @@ angular
       }
   });
 
-  $stateProvider.state("poll.retrieve.category", {
-    url : '/:category',
+  $stateProvider.state("poll.category", {
+    url : '/categories/:category',
     views: {
-      "poll-list@poll.retrieve": {
+      "poll-container@poll": {
         templateUrl: 'views/poll_list.html',
         controller: 'PollListCtrl'
 
