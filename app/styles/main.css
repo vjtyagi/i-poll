@@ -77,3 +77,9 @@ body {
     border-bottom: 0;
   }
 }
+
+.small-text{
+  color: #fff;
+  font-family: Arial;
+  font-size: 12px; 
+}
