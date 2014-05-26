@@ -1,8 +1,50 @@
 
 <ion-view  title = 'Do you like peanut butter ?'>
 
-	<ion-content>
-	    
+	 <ion-content>
+	    <div class = "list list-inset">
+	    	<div class = "item item-avatar">
+	    		<img src = "images/blue-album.jpg" />
+	    		<h2>Results</h2>
+	    		<p>Do you like peanut butter ? </p> 
+	    	</div>
+
+	    	<div class = "item item-body">
+	    		<div class = "row" side = "left">
+	    			<div class = "col" >
+	    				<j-pie-chart></j-pie-chart>
+	    			</div>
+	    		</div>
+	    		<div class = "row">
+	    			<div class = "col small-text">
+	    				<j-bar-chart></j-bar-chart>
+	    			</div>
+	    		</div>
+	    		
+
+	    	</div>
+
+	    	<div class = "item tabs tabs-secondary tabs-icon-top">
+	    		<a class = "tab-item" href = "#">
+	    			<i class = "icon ion-thumbsup"></i>
+	    			Yes
+	    		</a>
+	    		<a class = "tab-item" href = "#">
+	    			<i class = "icon ion-thumbsdown"></i>
+	    			No
+	    		</a>
+	    		<a class = "tab-item" href = "#">
+	    			<i class = "icon ion-ios7-circle-filled"></i>
+	    			Can't Say
+	    		</a>
+	    		<a class = "tab-item" href = "#">
+	    			<i class = "icon ion-chatbox"></i>
+	    			Comments
+	    		</a>
+	    	</div>
+
+	    </div>
+
 	</ion-content>
       
 </ion-view>
