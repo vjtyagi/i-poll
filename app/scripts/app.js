@@ -12,7 +12,8 @@ angular
 
   $stateProvider.state("poll", {
     url: '/poll',
-    templateUrl: 'views/parent.html'
+    templateUrl: 'views/parent.html',
+    controller: 'ParentCtrl'
   });
 
   $stateProvider.state("poll.categories", {
