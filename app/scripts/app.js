@@ -6,9 +6,9 @@ angular
   ])
 .config(function($stateProvider, $urlRouterProvider){
   
-  $urlRouterProvider.otherwise("/poll/categories/latest");
+  $urlRouterProvider.otherwise("/poll/categories/1");
 
-  $urlRouterProvider.when("/poll", "/poll/categories/latest");
+  $urlRouterProvider.when("/poll", "/poll/categories/1");
 
   $stateProvider.state("poll", {
     url: '/poll',
@@ -22,18 +22,20 @@ angular
         "poll-container@poll": {
           templateUrl: 'views/poll.html',
           controller: 'PollCtrl'
-
         }
       }
   });
 
-  $stateProvider.state("poll.category", {
-    url : '/categories/:category',
+  $stateProvider.state("poll.categories.category", {
+    url : '/:category',
     views: {
-      "poll-container@poll": {
-        templateUrl: 'views/poll_list.html',
-        controller: 'PollListCtrl'
+      "poll-list@poll.categories": {
+        templateUrl: 'views/poll_list.html'
 
+      },
+      "poll-categories@poll.categories" : {
+        templateUrl: "views/categories.html"
+        
       }
     }
   });
