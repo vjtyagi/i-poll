@@ -1,23 +1,31 @@
 
-      <ion-view title = "Categories" class = "dark">
-        <ion-content>
-              <ion-list>
-                <a class = 'item item-calm' href="#/poll/categries/latest">
-                 <i class ='icon ion-clock'></i>
-                  Latest Polls
-                </a>
-                <a class = 'item item-energized' href = "#/poll/categries/latest">
-                  <i class = 'icon ion-xbox'></i>
-                  Entertainment</a>
-                <a class = 'item item-balanced' href = "#/poll/categries/latest">
-                  <i class = 'icon ion-earth'></i>
-                  Sports</a>
-                <a class = 'item item-royal' href = "#/poll/categries/latest">
-                  <i class = 'icon ion-bug'></i>
-                  Political</a>
-              </ion-list>
-        </ion-content>
-      </ion-view>
+  <ion-side-menus>
+
+      <!-- Center content -->
+    <ion-side-menu-content drag-content = "true">
+      
+      <ion-nav-bar class="nav-title-slide-ios7 bar-assertive">    
+      </ion-nav-bar>
+
+      <ion-nav-view name = "poll-list" animation = "no-animation">
+
+      </ion-nav-view>
+    
+    </ion-side-menu-content>
+
+    <ion-side-menu side = "left">
+    
+      <ion-nav-bar class="nav-title-slide-ios7 bar-dark" >    
+      </ion-nav-bar>
+
+      <ion-nav-view name = "poll-categories">
+
+      </ion-nav-view>
+
+    </ion-side-menu>
+  </ion-side-menus>
+
+
   
 
 
