@@ -1,0 +1,13 @@
+<ion-view title = "Categories">
+        <ion-content class = "bg-dark">
+              <ion-list>
+                <a  ng-repeat = "category in categories" 
+                ng-click="selectPolls(category.id)" 
+                ng-class = "{ 'item item-assertive': activePollCategory.id == category.id, 'item item-dark': activePollCategory.id != category.id }" >
+                 <i class ='icon ion-clock'></i>
+                  {{category.title}}
+                </a>
+                
+              </ion-list>
+        </ion-content>
+      </ion-view>
