@@ -1,0 +1,28 @@
+<div class="modal">
+
+    <!-- Modal header bar -->
+    <ion-header-bar class="bar-assertive">
+      <h1 class="title">Add Poll</h1>
+      <button class="button button-clear txt-green" ng-click="closeNewTask()">Cancel</button>
+    </ion-header-bar>
+
+    <!-- Modal content area -->
+    <ion-content class = "bg-dark">
+
+      <form ng-submit="createTask(task)">
+        <div class="list ">
+          <label class="item item-input ">
+            <input type="text" placeholder="Enter Poll Category " ng-model="task.title">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Enter Poll Title " ng-model="task.title">
+          </label>
+        </div>
+        <div class="padding">
+          <button type="submit" class="button button-block alt-green">Create Poll</button>
+        </div>
+      </form>
+
+    </ion-content>
+
+  </div>
